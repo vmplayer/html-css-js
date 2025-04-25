@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparador de Preços</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .search-box {
+      margin-bottom: 30px;
+    }
+    input[type="text"] {
+      width: 70%;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .results {
+      margin-top: 20px;
+    }
+    .product {
+      background-color: white;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Comparador de Preços</h1>
+    <p>Encontre onde seu produto favorito está mais barato!</p>
+  </header>
+
+  <main>
+    <div class="search-box">
+      <input type="text" placeholder="Digite o nome do produto..." id="productInput">
+      <button onclick="buscarProduto()">Buscar</button>
+    </div>
+
+    <div class="results" id="resultados">
+      <!-- Resultados de exemplo -->
+      <div class="product">
+        <h3>Fone de Ouvido Bluetooth</h3>
+        <p><strong>R$ 99,90</strong> na Loja Exemplo 1</p>
+      </div>
+      <div class="product">
+        <h3>Fone de Ouvido Bluetooth</h3>
+        <p><strong>R$ 89,50</strong> na Loja Exemplo 2</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function buscarProduto() {
+      const produto = document.getElementById("productInput").value;
+      alert("Simulação de busca para: " + produto);
+    }
+  </script>
+</body>
+</html>
